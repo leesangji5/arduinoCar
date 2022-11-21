@@ -5,7 +5,6 @@ SoftwareSerial bluetooth(2, 3);
 void setup(){
   Serial.begin(9600);
   bluetooth.begin(9600);
-  pinMode(13, OUTPUT);
 }
 
 void loop(){
@@ -14,7 +13,6 @@ void loop(){
       int x = analogRead(A1);
       int y = analogRead(A0);
       bluetooth.write(direct(x, y));
-      digitalWrite(13, HIGH);
       delay(100);
     }
   }
