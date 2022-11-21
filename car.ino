@@ -8,8 +8,6 @@ int frontRight = 6;
 int trig = 8;
 int echo = 9;
 
-int pare = 10;
-
 int dir;
 
 Servo servofl;
@@ -41,9 +39,6 @@ void loop() {
       bluetooth.write(1);
     }
   }
-//  if (digitalRead(pare) == LOW){
-//    bluetooth.write(1);
-//  }
 }
 
 /////////////////////////////////
@@ -82,12 +77,12 @@ void direct(int dir){
     back();
   }
   else {
-    breacking();
+    parking();
   }
 }
 
 /////////////////////////////////////////
-void breacking(){
+void parking(){
   servofl.write(90);
   servofr.write(90);
 }
